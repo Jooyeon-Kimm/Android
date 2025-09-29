@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ShufflePwApp</string>
+    <string name="security_keypad">보안 키패드</string>
+    <string name="phone_verification">휴대폰 인증</string>
+    <string name="title_activity_pin">PinActivity</string>
+    <string name="title_activity_identity_input">IdentityInputActivity</string>
+    <string name="input_info_for_identity_verification">본인 확인을 위해 정보를 입력해주세요.</string>
+    <string name="input_complete">입력 완료</string>
+    <string name="phone_number">휴대폰 번호</string>
+    <string name="skt">SKT</string>
+    <string name="kt">KT</string>
+    <string name="lg_u_plus">LG U+</string>
+    <string name="skt_discount">SKT 알뜰폰</string>
+    <string name="kt_discount">KT 알뜰폰</string>
+    <string name="lg_u_plus_discount">LG U+ 알뜰폰</string>
+    <string name="male">남자</string>
+    <string name="female">여자</string>
+    <string name="input_6digit_verification_code">인증번호 6자리를 입력해주세요.</string>
+</resources>
