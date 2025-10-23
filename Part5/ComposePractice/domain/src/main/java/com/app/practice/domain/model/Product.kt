@@ -10,5 +10,4 @@ data class Product(
     val shop: Shop,
     val isNew: Boolean,
     val isFreeShipping: Boolean,
-
 )
