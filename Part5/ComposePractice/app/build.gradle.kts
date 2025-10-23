@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.dagger.hilt.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -37,11 +39,24 @@ android {
     buildFeatures {
         compose = true
     }
+
+    composeOptions {
+        // Kotlin 버전이랑 Jetpack Compose 버전이 호환되지 않을 때
+        // 버전 명시
+        kotlinCompilerExtensionVersion  = "1.5.10"
+    }
 }
 
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.compose.runtime)
+    implementation(libs.androidx.ui.tooling.preview)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
@@ -56,6 +71,14 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    implementation(project(":domain"))
+    implementation(project(":data"))
+    implementation(project(":presentation"))
+    implementation(libs.google.hilt.android)
+    kapt(libs.google.hilt.compiler)
 
     implementation(project(":domain"))
+    implementation(project(":data"))
+    implementation(project(":presentation"))
+
 }

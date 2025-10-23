@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.app.practice.domain"
+    namespace = "com.app.practice.presentation"
     compileSdk = 36
 
     defaultConfig {
@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -60,6 +61,11 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
+    implementation(project(":domain"))
     implementation(libs.google.hilt.android)
+    debugImplementation(libs.androidx.ui.tooling)
     kapt(libs.google.hilt.compiler)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.compose.material.icons.extended)
 }
